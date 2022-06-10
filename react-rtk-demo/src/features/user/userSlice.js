@@ -62,3 +62,16 @@ export default userSlice.reducer;
 //       state.error = action.error.message;
 //     });
 // },
+
+
+//  fetch with async await
+/*
+export const fetchUsers = createAsyncThunk(
+  'user/fetchUsers',
+  async () => {
+    const data = await fetch("https://jsonplaceholder.typicode.com/users")
+    const json = await data.json()
+    return json
+  }
+)
+*/
