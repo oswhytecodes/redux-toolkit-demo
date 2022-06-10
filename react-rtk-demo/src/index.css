@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e0cbbb;
+  background-color: #dbd8d7;
 }
 
 code {
@@ -18,7 +18,20 @@ code {
   align-items: center;
   flex-direction: column;
   gap: 3em;
+  padding: 2em;
 }
+.header {
+  text-align: left;
+}
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 0.8px solid rgb(145, 92, 182);
+  width: 30px;
+  height: 22px;
+  line-height: 1.65;
+}
+
 .btns {
   display: flex;
   justify-content: center;
@@ -27,12 +40,22 @@ code {
 }
 button {
   padding: 10px 15px;
+  border: none;
   border-radius: 8px;
-  background-color: transparent;
-  border: 3px solid #fff;
+  /* background-color: transparent; */
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(145, 92, 182);
   font-weight: bold;
   text-transform: uppercase;
 }
 li {
   list-style: none;
+}
+.CakeView,
+.IcecreamView,
+.UserView {
+  outline: 1px solid black;
+  padding: 2em;
+  width: 70%;
+  max-width: 600px;
 }

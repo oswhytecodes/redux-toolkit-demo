@@ -10,7 +10,7 @@ export const UserView = () => {
     dispatch(fetchUsers());
   }, []);
   return (
-    <div>
+    <div className="UserView">
       <h2> List of users</h2>
       {user.loading && <div>Loading...</div>}
       {!user.loading && user.error ? <div>Error: {user.error}</div> : null}

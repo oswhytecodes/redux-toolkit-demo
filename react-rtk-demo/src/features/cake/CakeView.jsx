@@ -11,11 +11,12 @@ export const CakeView = () => {
   const numOfCakes = useSelector((state) => state.cake.numOfCakes);
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="CakeView">
       <div
+      
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
           gap: "1em",
         }}

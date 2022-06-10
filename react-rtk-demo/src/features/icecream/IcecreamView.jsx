@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ordered, restocked } from "./icecreamSlice";
 
-
 export const IceCreamView = () => {
   const [value, setValue] = useState(1);
   const handleChange = (e) => {
@@ -11,11 +10,11 @@ export const IceCreamView = () => {
   const numOfIcecreams = useSelector((state) => state.icecream.numOfIcecream);
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="IcecreamView">
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
           gap: "1em",
         }}
