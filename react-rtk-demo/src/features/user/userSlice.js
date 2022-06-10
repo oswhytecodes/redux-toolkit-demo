@@ -25,20 +25,20 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers", () => {
 const userSlice = createSlice({
   name: "user",
   initialState: initialState,
-  extraReducers: (builder) => {
-    builder.addCase(fetchUsers.pending, (state) => {
+  extraReducers: {
+    [fetchUsers.pending]: (state) => {
       state.loading = true;
-    }),
-      builder.addCase(fetchUsers.fulfilled, (state, action) => {
-        state.loading = false;
-        state.users = action.payload;
-        state.error = "";
-      }),
-      builder.addCase(fetchUsers.rejected, (state, action) => {
-        state.loading = false;
-        state.users = [];
-        state.error = action.error.message;
-      });
+    },
+    [fetchUsers.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.users = action.payload;
+      state.error = "";
+    },
+    [fetchUsers.rejected]: (state, action) => {
+      state.loading = false;
+      state.users = [];
+      state.error = action.error.message;
+    },
   },
 });
 // export the userSlice reducer
@@ -46,3 +46,19 @@ const userSlice = createSlice({
 export default userSlice.reducer;
 // export the api call
 // module.exports.fetchUsers = fetchUsers;
+
+// extraReducers: (builder) => {
+//   builder.addCase(fetchUsers.pending, (state) => {
+//     state.loading = true;
+//   }),
+//     builder.addCase(fetchUsers.fulfilled, (state, action) => {
+//       state.loading = false;
+//       state.users = action.payload;
+//       state.error = "";
+//     }),
+//     builder.addCase(fetchUsers.rejected, (state, action) => {
+//       state.loading = false;
+//       state.users = [];
+//       state.error = action.error.message;
+//     });
+// },
